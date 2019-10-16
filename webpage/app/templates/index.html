@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+</head>
+
+<body>
+  <h1>Test page</h1>
+</body>
+
+<script>
+  $('body').append(`running jquery version ${$.fn.jquery}`);
+</script>
