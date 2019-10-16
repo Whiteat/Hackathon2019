@@ -7,5 +7,15 @@ Corey Bastarache
 Jonathan Huber
 <Insert Last Teammate Name Here>
 
+On Your Laptop Please install:
+  -Atom
+    -Tele-type
+    -Kite
+    -Pip
+    -MySQL connector
+
+See:
+https://pynative.com/python-mysql-database-connection/
+
 
 Challenge Notes:
