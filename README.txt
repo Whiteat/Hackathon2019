@@ -13,7 +13,7 @@ On Your Laptop Please install:
     -Kite
     -Pip
     -MySQL connector
-
+  -Python 3.7.5
 See:
 https://pynative.com/python-mysql-database-connection/
 
