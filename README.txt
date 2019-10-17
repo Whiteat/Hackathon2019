@@ -5,7 +5,7 @@ By:
 Alexander White
 Corey Bastarache
 Jonathan Huber
-<Insert Last Teammate Name Here>
+Josh Barkovic
 
 On Your Laptop Please install:
   -Atom
