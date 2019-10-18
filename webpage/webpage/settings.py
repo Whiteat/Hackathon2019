@@ -81,13 +81,17 @@ WSGI_APPLICATION = 'webpage.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'app',
-        'USER': 'dev',
-        'PASSWORD': 'H@ckathon19',
-        'HOST': '192.168.88.129',
-        'PORT': '',
-    }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    # 'mysql':{
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'app',
+    #     'USER': 'dev',
+    #     'PASSWORD': 'H@ckathon19',
+    #     'HOST': '192.168.88.129',
+    #     'PORT': '',
+    # }
 }
 
 

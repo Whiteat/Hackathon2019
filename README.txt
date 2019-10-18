@@ -16,6 +16,7 @@ On Your Laptop Please install:
   -Python 3.7.5
 See:
 https://pynative.com/python-mysql-database-connection/
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
 
 
 Challenge Notes:
