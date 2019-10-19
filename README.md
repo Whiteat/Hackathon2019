@@ -68,3 +68,8 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
   - retailers
   - fertilizers/soil mfg
   - local radius to greenhouse? soil mfg?
+
+
+- mfgs need a side bonus aside from consumer pressure
+- consumer needs to see improvement to product, taste/colour/more nutrition
+- connect the compost suppliers to the user 

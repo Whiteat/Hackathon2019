@@ -15,7 +15,13 @@ def greenhouses(request):
     return render(request, 'greenhouses.html', context)
 
 def greenhouse(request, id):
+    greenhouse = Greenhouse.objects.get(id=id)
+    certifications = Certification.objects.filter(greenhouse = greenhouse.id).values()
+    products = Unit.objects.filter(greenhouse = greenhouse.id).values()
+    print(certifications)
     context = {
-        'greenhouse': Greenhouse.objects.filter(id=id),
+        'greenhouse': greenhouse,
+        'certifications': certifications,
+        'products': products,
     }
     return render(request, 'greenhouse.html', context)

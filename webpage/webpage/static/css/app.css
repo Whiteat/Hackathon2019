@@ -1,3 +1,25 @@
 body {
   background: #556B2F;
+  color: #ffffff;
+}
+
+div.navbar {
+  width: 100%;
+  height: 110px;
+  background: #006400;
+}
+
+div.navbar img {
+  width: 100px;
+  height: auto;
+  margin-top: 5px;
+}
+
+div.navbar a {
+  font-size:  25px;
+  padding-left: 10px;
+}
+
+div.body {
+  margin-top: 20px;
 }
