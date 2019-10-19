@@ -41,11 +41,11 @@
       <p>No Products</p>
     {% else %}
       <p>Products:</p>
-      <table>
+      <ul>
       {% for p in products %}
-        <tr><td><a href="/product/{{p.product.id}}">{{ p.recipe.name }}</a></td></tr>
+        <li><a href="/product/{{p.product.id}}">{{ p.recipe.name }}</a></li>
       {% endfor %}
-    </table>
+    </ul>
     {% endif %}
   {% endif %}
 </body>
