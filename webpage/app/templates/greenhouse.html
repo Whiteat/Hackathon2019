@@ -8,5 +8,41 @@
 </head>
 
 <body>
-  <h1>{{greenhouse.name}}</h1>
+  <div class="navbar">
+    <img src="/static/img/icon.png" style="background-size: contain;" />
+    <a href="/">Home</a>
+    <a href="/greenhouses">Greenhouse Partners</a>
+  </div>
+
+  {% if not greenhouse %}
+    <h1> Error: Greenhouse not found </h1>
+  {% else %}
+    <h1>{{ greenhouse.name }}</h1>
+    <p>Type: {{ greenhouse.type }}</p>
+    <p>Address: {{ greenhouse.address }}</p>
+    <p>Phone: {{ greenhouse.phone }}</p>
+    <p>Join Date: {{ greenhouse.joinDate }}</p>
+
+    {% if not certifications %}
+      <p>No Certifications</p>
+    {% else %}
+      <p>Certifications: </p>
+      <ul>
+      {% for cert in certifications %}
+        <li>{{ cert.name }}: {{ cert.dateCertified }}, {{ cert.score }}%</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if not products %}
+      <p>No Products</p>
+    {% else %}
+      <p>Products:</p>
+      <ul>
+      {% for product in products %}
+        <p>{{ product.id }}</p>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
 </body>

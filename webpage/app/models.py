@@ -36,6 +36,7 @@ class Soil(models.Model):
 
 class PlantRecipe(models.Model):
     id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=40, help_text='Name Of the plant')
 
 class Unit(models.Model):
     id = models.AutoField(primary_key=True)
