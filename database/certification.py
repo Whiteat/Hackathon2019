@@ -7,16 +7,15 @@ class Certification(models.Model):
     ##my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
     id = models.AutoField(primary_key=true)
     name = models.CharField(max_length=40, help_text='Name Of the Greenhouse')
-    type = models.CharField(max_length=40, help_text='Type of plant annual/paranual')
-    date_added = models.DateTimeField('date added')
+    dateCertified = models.DateField('datetime Certified')
+    greenHouse = models.ForeignKey(Greenhouse, on_delete=models.CASCADE)
+    type = models.CharField()
+    score = models.DecimalField(max_digits=3,decimal_places=0)
+    requiredScore = models.DecimalField(max_digits=3,decimal_places=0)
 
 
     ...
 
-    # Metadata
-    class Meta:
-        ordering = ['-my_field_name']
 
     def __str__(self):
-        """String for representing the MyModelName object (in Admin site etc.)."""
         return self.name
