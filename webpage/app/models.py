@@ -25,8 +25,8 @@ class Fertilizer(models.Model):
 
 class Soil(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.AutoField(max_length=40, help_text='Name of Soil Type')
-    pH = models.AutoField()
+    name = models.CharField(max_length=40, help_text='Name of Soil Type')
+    pH = models.DecimalField(max_digits=5, decimal_places=3)
     nitrogen = models.DecimalField(max_digits=3,decimal_places=0)
     phosphorus = models.DecimalField(max_digits=3,decimal_places=0)
     potassium = models.DecimalField(max_digits=3,decimal_places=0)
@@ -42,5 +42,5 @@ class Unit(models.Model):
     creation = models.DateField(auto_now=False, auto_now_add=False)
     greenhouse = models.ForeignKey(Greenhouse, on_delete=models.CASCADE)
     fertilizer = models.ForeignKey(Fertilizer, on_delete=models.CASCADE)
-    soil = models.ForeignKey(Soil, on_delete=models.CASCADE)
+    soil = models.ForeignKey(Soil, on_delete=models.CASCADE,null=True)
     plantRecipe = models.ForeignKey(PlantRecipe, on_delete=models.CASCADE)
