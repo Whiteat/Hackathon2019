@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
   <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
-  <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
 </head>
 
@@ -16,20 +16,10 @@
     </ul>
   </div>
 
-  <div class="body">
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Address</th>
-    </tr>
-    {% for greenhouse in greenhouses %}
-    <tr>
-      <td><a href='/greenhouse/{{greenhouse.id}}'>{{ greenhouse.name }}</a></td>
-      <td>{{ greenhouse.type }}</td>
-      <td>{{ greenhouse.address }}</td>
-    </tr>
-    {% endfor %}
-  </table>
-</div>
+    {% if not product %}
+      <p>Product not found!</p>
+    {% else %}
+        <H1>{{product.plantRecipe.name}}</H1>
+
+    {% endif %}
 </body>

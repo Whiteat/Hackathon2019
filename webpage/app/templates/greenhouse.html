@@ -10,8 +10,10 @@
 <body>
   <div class="navbar">
     <img src="/static/img/icon.png" style="background-size: contain;" />
-    <a href="/">Home</a>
-    <a href="/greenhouses">Greenhouse Partners</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/greenhouses" class='active'>Greenhouse Partners</a></li>
+    </ul>
   </div>
 
   {% if not greenhouse %}
@@ -27,22 +29,22 @@
       <p>No Certifications</p>
     {% else %}
       <p>Certifications: </p>
-      <ul>
+      <table style="padding-left: 25px;">
       {% for cert in certifications %}
-        <li>{{ cert.name }}: {{ cert.dateCertified }}, {{ cert.score }}%</li>
+        <tr><td>{{ cert.name }}</td><td>{{ cert.score }}%</td><td>Issued on {{ cert.dateCertified }}</td></tr>
       {% endfor %}
-      </ul>
+    </table>
     {% endif %}
 
     {% if not products %}
       <p>No Products</p>
     {% else %}
       <p>Products:</p>
-      <ul>
-      {% for product in products %}
-        <p>{{ product.id }}</p>
+      <table>
+      {% for p in products %}
+        <tr><td><a href="/product/{{p.product.id}}">{{ p.recipe.name }}</a></td></tr>
       {% endfor %}
-      </ul>
+    </table>
     {% endif %}
   {% endif %}
 </body>
