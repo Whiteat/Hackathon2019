@@ -12,24 +12,19 @@
     <img src="/static/img/icon.png" style="background-size: contain;" />
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/greenhouses" class='active'>Greenhouse Partners</a></li>
+      <li><a href="/certifications" class='active'>Certifications</a></li>
+      <li><a href="/farms">Farms</a></li>
     </ul>
   </div>
 
   <div class="body">
+  <h1>Certifications<h1>
   <table>
+    {% for cert in certifications %}
     <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Address</th>
-    </tr>
-    {% for greenhouse in greenhouses %}
-    <tr>
-      <td><a href='/greenhouse/{{greenhouse.id}}'>{{ greenhouse.name }}</a></td>
-      <td>{{ greenhouse.type }}</td>
-      <td>{{ greenhouse.address }}</td>
+      <td><a href='/certification/{{cert.id}}'>{{ cert.name }}</a></td>
     </tr>
     {% endfor %}
   </table>
-</div>
+  </div>
 </body>

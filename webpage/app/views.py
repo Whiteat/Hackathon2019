@@ -8,11 +8,23 @@ from app.models import *
 def index(request):
     return render_to_response('index.html')
 
+def certifications(request):
+    context = {
+    'certifications': Certification.objects.all(),
+    }
+    return render(request, 'certifications.html', context)
+
+def certification(request, id):
+    context = {
+        'certification': Certification.objects.get(id=id),
+        }
+    return render(request, 'certification.html', context)
+
 def greenhouses(request):
     context = {
         'greenhouses': Greenhouse.objects.all()
     }
-    return render(request, 'greenhouses.html', context)
+    return render(request, 'farms.html', context)
 
 def greenhouse(request, id):
     greenhouse = Greenhouse.objects.get(id=id)
@@ -35,7 +47,7 @@ def greenhouse(request, id):
         'certifications': certifications,
         'products': products,
     }
-    return render(request, 'greenhouse.html', context)
+    return render(request, 'farm.html', context)
 
 def product(request, id):
     product = Unit.objects.get(id=id)
