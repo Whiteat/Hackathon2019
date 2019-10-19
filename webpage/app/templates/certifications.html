@@ -17,14 +17,21 @@
     </ul>
   </div>
 
+  <h1>Certifications</h1>
+
   <div class="body">
-  <h1>Certifications<h1>
+
   <table>
     {% for cert in certifications %}
     <tr>
-      <td><a href='/certification/{{cert.id}}'>{{ cert.name }}</a></td>
+      <td><h2>{{ cert.name }}</h2></td>
+    </tr>
+
+    <tr>
+        <td>{{ cert.description }}</td>
     </tr>
     {% endfor %}
   </table>
   </div>
+
 </body>
