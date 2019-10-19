@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="/static/img/icon.png" style="background-size: contain;" />
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/certifications">Certifications</a></li>
+      <li><a href="/farms">Farms</a></li>
+    </ul>
+  </div>
+
+    {% if not product %}
+      <p>Product not found!</p>
+    {% else %}
+        <H1>{{product.plantRecipe.name}}</H1>
+
+    {% endif %}
+</body>

@@ -10,8 +10,11 @@
 <body>
   <div class="navbar">
     <img src="/static/img/icon.png" style="background-size: contain;" />
-    <a href="/">Home</a>
-    <a href="/greenhouses">Greenhouse Partners</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/certifications">Certifications</a></li>
+      <li><a href="/farms" class='active'>Farms</a></li>
+    </ul>
   </div>
 
   <div class="body">
@@ -23,11 +26,11 @@
     </tr>
     {% for greenhouse in greenhouses %}
     <tr>
-      <td><a href='/greenhouse/{{greenhouse.id}}'>{{ greenhouse.name }}</a></td>
+      <td><a href='/farm/{{greenhouse.id}}'>{{ greenhouse.name }}</a></td>
       <td>{{ greenhouse.type }}</td>
       <td>{{ greenhouse.address }}</td>
     </tr>
     {% endfor %}
   </table>
-</div>
+  </div>
 </body>

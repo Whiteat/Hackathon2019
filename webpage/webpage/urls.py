@@ -21,8 +21,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', v.index),
-    path('greenhouses/', v.greenhouses),
-    path('greenhouse/<int:id>/', v.greenhouse),
+    path('farms/', v.greenhouses),
+    path('farm/<int:id>/', v.greenhouse),
+    path('product/<int:id>/', v.product),
+    path('certifications/', v.certifications),
+    path('certification/<int:id>/', v.certification),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

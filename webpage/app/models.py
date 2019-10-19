@@ -12,6 +12,7 @@ class Greenhouse(models.Model):
 class Certification(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=40, help_text='Name Of the Greenhouse')
+    description = models.CharField(max_length=1000, null=True)
     dateCertified = models.DateField('datetime Certified')
     greenhouse = models.ForeignKey(Greenhouse, on_delete=models.CASCADE)
     type = models.CharField(max_length=30)

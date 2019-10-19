@@ -16,7 +16,19 @@
             <script src="{% static 'js/main.js' %}"></script>
 </head>
 
+<<<<<<< HEAD:webpage/app/templates/greenhouse.html
     <body class="is-preload">
+=======
+<body>
+  <div class="navbar">
+    <img src="/static/img/icon.png" style="background-size: contain;" />
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/certifications">Certifications</a></li>
+      <li><a href="/farms" class='active'>Farms</a></li>
+    </ul>
+  </div>
+>>>>>>> b3f53ce315a7aa92546986a005e6be0c11ee2c54:webpage/app/templates/farm.html
 
         <!-- Header -->
             <header id="header">
@@ -47,11 +59,11 @@
       <p>No Certifications</p>
     {% else %}
       <p>Certifications: </p>
-      <ul>
+      <table style="padding-left: 25px;">
       {% for cert in certifications %}
-        <li>{{ cert.name }}: {{ cert.dateCertified }}, {{ cert.score }}%</li>
+        <tr><td>{{ cert.name }}</td><td>{{ cert.score }}%</td><td>Issued on {{ cert.dateCertified }}</td></tr>
       {% endfor %}
-      </ul>
+    </table>
     {% endif %}
 
     {% if not products %}
@@ -59,10 +71,10 @@
     {% else %}
       <p>Products:</p>
       <ul>
-      {% for product in products %}
-        <p>{{ product.id }}</p>
+      {% for p in products %}
+        <li><a href="/product/{{p.product.id}}">{{ p.recipe.name }}</a></li>
       {% endfor %}
-      </ul>
+    </ul>
     {% endif %}
   {% endif %}
 

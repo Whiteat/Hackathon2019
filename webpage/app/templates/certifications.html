@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="/static/img/icon.png" style="background-size: contain;" />
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/certifications" class='active'>Certifications</a></li>
+      <li><a href="/farms">Farms</a></li>
+    </ul>
+  </div>
+
+  <h1>Certifications</h1>
+
+  <div class="body">
+
+  <table>
+    {% for cert in certifications %}
+    <tr>
+      <td><h2>{{ cert.name }}</h2></td>
+    </tr>
+
+    <tr>
+        <td>{{ cert.description }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  </div>
+
+</body>

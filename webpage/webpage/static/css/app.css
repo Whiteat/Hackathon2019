@@ -797,6 +797,7 @@ table.alt tbody tr td {
 .testimonials {
   margin: 2.5rem 0;
   width: 100%;
+<<<<<<< HEAD
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2820,3 +2821,60 @@ body.is-menu-visible #menu {
   transform: translateX(0);
   box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
   visibility: visible; }
+=======
+  height: 110px;
+  background: #006400;
+}
+
+div.navbar ul {
+  position: relative;
+  top: -50px;
+  left: 125px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.navbar li {
+  display: inline;
+}
+
+div.navbar img {
+  width: 100px;
+  height: auto;
+  margin-top: 5px;
+  display: inline;
+}
+
+a {
+  color: white;
+  text-align: center;
+  /* text-decoration: none; */
+}
+
+div.navbar a {
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:  30px;
+}
+
+div.navbar a:hover {
+  background-color: #111;
+}
+
+div.body {
+  margin-top: 18px;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+td {
+  padding-right: 50px;
+}
+>>>>>>> b3f53ce315a7aa92546986a005e6be0c11ee2c54
