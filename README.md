@@ -35,3 +35,11 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
   - Ecotourism & Sustainability
     - tree-o-code
   - Production & Environment
+
+
+  # DB Connection settings
+  serverhost = 192.168.0.20
+  port = 3306
+  database = dbname
+  username = alex
+  
