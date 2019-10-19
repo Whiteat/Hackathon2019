@@ -1,19 +1,39 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                <meta name="description" content="" />
+        <meta name="keywords" content="" />
   <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+              <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/browser.min.js' %}"></script>
+            <script src="{% static 'js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'js/util.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
 </head>
 
-<body>
-  <div class="navbar">
-    <img src="/static/img/icon.png" style="background-size: contain;" />
-    <a href="/">Home</a>
-    <a href="/greenhouses">Greenhouse Partners</a>
-  </div>
+    <body class="is-preload">
 
+        <!-- Header -->
+            <header id="header">
+                <a class="logo" href="/">AgriCheck</a>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+
+        <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="generic.html">Generic</a></li>
+                </ul>
+            </nav>
   {% if not greenhouse %}
     <h1> Error: Greenhouse not found </h1>
   {% else %}
@@ -45,4 +65,15 @@
       </ul>
     {% endif %}
   {% endif %}
+
+
+ <!-- <nav id="menu">
+  <ul class="links">
+  <li>    <a href="/">Home</a></li>
+  <li><a href="/greenhouses">Greenhouse Partners</a></li>
+  </ul>
+  <a href="#menu" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a>
+  </nav> -->
+        <!-- Scripts -->
+
 </body>
