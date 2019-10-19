@@ -31,6 +31,7 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
   ###### Challenge Statement: How can tech help consumers learn about soil and water management
     - educate about growing practices and help consumers innovate
     - destruction of top Soil
+<<<<<<< HEAD
       - hurt by synthetic fertilizers problem needs to be solved by natural re fertilization of soil emulating real ecosystems
   ##### Diseases & Pests
     ###### how can tech help farmers control pests while ensuring surrounding areas are not impacted.
@@ -62,3 +63,19 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
   - retailers
   - fertilizers/soil mfg
   - local radius to greenhouse? soil mfg?
+=======
+      -hurt by synthetic fertilizers problem needs to be solved by natural re fertilization of soil emulating real ecosystems
+  - Diseases & Pests
+  - Infrastructure
+  - Ecotourism & Sustainability
+    - tree-o-code
+  - Production & Environment
+
+
+  # DB Connection settings
+  serverhost = 192.168.0.20
+  port = 3306
+  database = dbname
+  username = alex
+  
+>>>>>>> f33e26d1baf90d089745b0d2db1070e20983b7ba
