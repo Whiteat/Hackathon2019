@@ -23,6 +23,7 @@ urlpatterns = [
     path('', v.index),
     path('greenhouses/', v.greenhouses),
     path('greenhouse/<int:id>/', v.greenhouse),
+    path('product/<int:id>/', v.product),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

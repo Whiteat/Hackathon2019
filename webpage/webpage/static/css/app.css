@@ -9,20 +9,54 @@ div.navbar {
   background: #006400;
 }
 
+div.navbar ul {
+  position: relative;
+  top: -50px;
+  left: 125px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.navbar li {
+  display: inline;
+}
+
 div.navbar img {
   width: 100px;
   height: auto;
   margin-top: 5px;
+  display: inline;
+}
+
+a {
+  color: white;
+  text-align: center;
+  /* text-decoration: none; */
 }
 
 div.navbar a {
-  font-size: 30px;
-  font-weight: bold;
+  display: inline;
   color: white;
-  padding-left: 10px;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:  30px;
+}
+
+div.navbar a:hover {
+  background-color: #111;
 }
 
 div.body {
   margin-top: 20px;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+td {
+  padding-right: 50px;
 }
