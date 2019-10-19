@@ -8,9 +8,18 @@
 </head>
 
 <body>
-  <h1>Test page</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Address</th>
+    </tr>
+    {% for greenhouse in greenhouses %}
+    <tr>
+      <td><a ref='/greenhouse/{{greenhouse.id}}'>{{ greenhouse.name }}</a></td>
+      <td>{{ greenhouse.type }}</td>
+      <td>{{ greenhouse.address }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 </body>
-
-<script>
-  $('body').append(`running jquery version ${$.fn.jquery}`);
-</script>

@@ -27,11 +27,38 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
     - pip install -r requirements.txt
 
 # Challenge Notes:
-  - Soil Erosion & Depletion
+  ##### Soil Erosion & Depletion
+  ###### Challenge Statement: How can tech help consumers learn about soil and water management
+    - educate about growing practices and help consumers innovate
     - destruction of top Soil
-      -hurt by synthetic fertilizers problem needs to be solved by natural re fertilization of soil emulating real ecosystems
-  - Diseases & Pests
-  - Infrastructure
-  - Ecotourism & Sustainability
-    - tree-o-code
-  - Production & Environment
+      - hurt by synthetic fertilizers problem needs to be solved by natural re fertilization of soil emulating real ecosystems
+  ##### Diseases & Pests
+    ###### how can tech help farmers control pests while ensuring surrounding areas are not impacted.
+  ##### Infrastructure
+    ###### how can we use tech to improve irrigation efficiency and make better decisions about irrigation timing
+  ##### Ecotourism & Sustainability
+    ###### facilitate local tourism, encourage sustainability and protect rural/agrarian and nat. landscape
+    - tree-o-code web page about Niagara canopy
+  ##### Production & Environment
+    ###### how to leverage tech to improve efficiency and incorporate automation into agricultural work
+
+# Pitch Notes
+- system of trust building and transparency
+  - certifying and auditing mfgs processes ISO9001 style
+  - soil to greenhouse
+  - greenhouse to retailer
+  - retailers to consumers
+- Sustainability checkmark on Production
+  - carbon footprint
+  - water use
+  - fertilizers use and overflow
+  - emissions
+  - sustainably/locally sourced input products
+  - distance to carrying retailers
+- stakeholders
+  - gov. lead initiatives
+  - farmers
+  - consumers
+  - retailers
+  - fertilizers/soil mfg
+  - local radius to greenhouse? soil mfg?
