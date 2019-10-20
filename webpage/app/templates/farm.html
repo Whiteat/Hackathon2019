@@ -1,12 +1,24 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                <meta name="description" content="" />
+        <meta name="keywords" content="" />
   <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+              <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/browser.min.js' %}"></script>
+            <script src="{% static 'js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'js/util.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
 </head>
 
+<<<<<<< HEAD:webpage/app/templates/greenhouse.html
+    <body class="is-preload">
+=======
 <body>
   <div class="navbar">
     <img src="/static/img/icon.png" style="background-size: contain;" />
@@ -17,7 +29,24 @@
       <li><a href="/soils">Soils</a></li>
     </ul>
   </div>
+>>>>>>> b3f53ce315a7aa92546986a005e6be0c11ee2c54:webpage/app/templates/farm.html
 
+        <!-- Header -->
+            <header id="header">
+                <a class="logo" href="/">AgriCheck</a>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+
+        <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="generic.html">Generic</a></li>
+                </ul>
+            </nav>
   {% if not greenhouse %}
     <h1> Error: Greenhouse not found </h1>
   {% else %}
@@ -49,4 +78,15 @@
     </ul>
     {% endif %}
   {% endif %}
+
+
+ <!-- <nav id="menu">
+  <ul class="links">
+  <li>    <a href="/">Home</a></li>
+  <li><a href="/greenhouses">Greenhouse Partners</a></li>
+  </ul>
+  <a href="#menu" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a>
+  </nav> -->
+        <!-- Scripts -->
+
 </body>
