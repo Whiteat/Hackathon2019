@@ -14,14 +14,20 @@
       <li><a href="/">Home</a></li>
       <li><a href="/certifications">Certifications</a></li>
       <li><a href="/farms">Farms</a></li>
-      <li><a href="/soils">Soils</a></li>
+      <li><a href="/soils" class='active'>Soils</a></li>
     </ul>
   </div>
 
-    {% if not product %}
-      <p>Product not found!</p>
-    {% else %}
-        <H1>{{product.plantRecipe.name}}</H1>
-
-    {% endif %}
+  {% if not soil %}
+    <h1> Error: Soil not found!</h1>
+  {% else %}
+    <h1>{{ soil.name }}</h1>
+    <p>pH: {{ soil.pH }}</p>
+    <p>Nitrogen: {{ soil.nitrogen }}</p>
+    <p>Phosphorus: {{ soil.phosphorus }}</p>
+    <p>Potassium: {{ soil.potassium }}</p>
+    <p>Calcium: {{ soil.calcium }}</p>
+    <p>Copper: {{ soil.copper }}</p>
+    <p>Sulfur: {{ soil.sulphur }}</p>
+  {% endif %}
 </body>

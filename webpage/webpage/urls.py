@@ -26,6 +26,8 @@ urlpatterns = [
     path('product/<int:id>/', v.product),
     path('certifications/', v.certifications),
     path('certification/<int:id>/', v.certification),
+    path('soils/', v.soils),
+    path('soil/<int:id>/', v.soil),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

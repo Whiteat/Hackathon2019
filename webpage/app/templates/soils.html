@@ -12,11 +12,26 @@
     <img src="/static/img/icon.png" style="background-size: contain;" />
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/certifications" class='active'>Certifications</a></li>
+      <li><a href="/certifications">Certifications</a></li>
       <li><a href="/farms">Farms</a></li>
-      <li><a href="/soils">Soils</a></li>
+      <li><a href="/soils" class='active'>Soils</a></li>
     </ul>
   </div>
 
-  <h1>{{ certification.name }}<h1>
+  <div class="body">
+  {% if not soils %}
+  <h1>No Soils found!</h1>
+  {% else %}
+  <table>
+    <tr>
+      <th>Name</th>
+    </tr>
+    {% for soil in soils %}
+    <tr>
+      <td><a href='/soil/{{soil.id}}'>{{ soil.name }}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+  </div>
 </body>
