@@ -5,20 +5,31 @@
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/browser.min.js' %}"></script>
+  <script src="{% static 'js/breakpoints.min.js' %}"></script>
+  <script src="{% static 'js/util.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </head>
 
 <body>
-  <div class="navbar">
-    <img src="/static/img/icon.png" style="background-size: contain;" />
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/certifications">Certifications</a></li>
-      <li><a href="/farms">Farms</a></li>
-      <li><a href="/soils" class='active'>Soils</a></li>
-    </ul>
-  </div>
-
-  <div class="body">
+    <!-- Header -->
+        <header id="header">
+            <a class="logo" href="/">AgriCheck</a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+                <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/certifications">Certifications</a></li>
+              <li><a href="/farms">Farms</a></li>
+              <li><a href="/soils" class='active'>Soils</a></li>
+            </ul>
+        </nav>
+<div class="body">
   {% if not soils %}
   <h1>No Soils found!</h1>
   {% else %}
@@ -34,4 +45,9 @@
   </table>
   {% endif %}
   </div>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/browser.min.js' %}"></script>
+  <script src="{% static 'js/breakpoints.min.js' %}"></script>
+  <script src="{% static 'js/util.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </body>
