@@ -2772,7 +2772,7 @@ body {
         padding: 0; }
         #menu > ul.links > li > a {
           border: 0;
-          padding: 12%;
+          padding-left: 12%;
           border-top: solid 1px rgba(255, 255, 255, 0.25);
           color: inherit;
           display: block;
