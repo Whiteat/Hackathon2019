@@ -12,7 +12,12 @@
             <script src="{% static 'js/main.js' %}"></script>
 </head>
 
-<body>
+<body class="is-preload">
+  <section id="main" class="wrapper">
+  <div class="inner">
+  <!--<div class="highlights">-->
+  <section>
+  <div class="content">
         <!-- Header -->
             <header id="header">
                 <a class="logo" href="/">AgriCheck</a>
@@ -36,7 +41,10 @@
         <H1>{{product.plantRecipe.name}}</H1>
 
     {% endif %}
-
+</div>
+</section>
+</div>
+</section>
       <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script src="{% static 'js/jquery.min.js' %}"></script>
             <script src="{% static 'js/browser.min.js' %}"></script>

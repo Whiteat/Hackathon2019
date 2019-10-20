@@ -12,7 +12,7 @@
   <script src="{% static 'js/main.js' %}"></script>
 </head>
 
-<body>
+<body class="is-preload">
     <!-- Header -->
         <header id="header">
             <a class="logo" href="/">AgriCheck</a>
@@ -29,7 +29,14 @@
               <li><a href="/soils" class='active'>Soils</a></li>
             </ul>
         </nav>
-<div class="body">
+        <div id="heading">
+        <h1>Soils</h1>
+        </div>
+  <section id="main" class="wrapper">
+  <div class="inner">
+  <!--<div class="highlights">-->
+  <section>
+  <div class="content">
   {% if not soils %}
   <h1>No Soils found!</h1>
   {% else %}
@@ -44,7 +51,10 @@
     {% endfor %}
   </table>
   {% endif %}
-  </div>
+</div>
+</section>
+</div>
+</section>
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/browser.min.js' %}"></script>
   <script src="{% static 'js/breakpoints.min.js' %}"></script>

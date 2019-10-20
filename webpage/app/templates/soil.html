@@ -7,7 +7,7 @@
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
 </head>
 
-<body>
+<body class="is-preload">
         <!-- Header -->
             <header id="header">
                 <a class="logo" href="/">AgriCheck</a>
@@ -24,19 +24,28 @@
                   <li><a href="/soils" class='active'>Soils</a></li>
                 </ul>
             </nav>
+              <section id="main" class="wrapper">
+  <div class="inner">
+  <!--<div class="highlights">-->
+  <section>
+  <div class="content">
 
   {% if not soil %}
     <h1> Error: Soil not found!</h1>
   {% else %}
     <h1>{{ soil.name }}</h1>
-    <p>pH: {{ soil.pH }}</p>
-    <p>Nitrogen: {{ soil.nitrogen }}</p>
-    <p>Phosphorus: {{ soil.phosphorus }}</p>
-    <p>Potassium: {{ soil.potassium }}</p>
-    <p>Calcium: {{ soil.calcium }}</p>
-    <p>Copper: {{ soil.copper }}</p>
-    <p>Sulfur: {{ soil.sulphur }}</p>
+    <h3>pH: {{ soil.pH }}</h3>
+    <h3>Nitrogen: {{ soil.nitrogen }}</h3>
+    <h3>Phosphorus: {{ soil.phosphorus }}</h3>
+    <h3>Potassium: {{ soil.potassium }}</h3>
+    <h3>Calcium: {{ soil.calcium }}</h3>
+    <h3>Copper: {{ soil.copper }}</h3>
+    <h3>Sulfur: {{ soil.sulphur }}</h3>
   {% endif %}
+  </div>
+  </section>
+  </div>
+  </section>
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script src="{% static 'js/jquery.min.js' %}"></script>
             <script src="{% static 'js/browser.min.js' %}"></script>
