@@ -8,27 +8,39 @@
 </head>
 
 <body>
-  <div class="navbar">
-    <img src="/static/img/icon.png" style="background-size: contain;" />
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/certifications" class='active'>Certifications</a></li>
-      <li><a href="/farms">Farms</a></li>
-      <li><a href="/soils">Soils</a></li>
-    </ul>
-  </div>
+        <!-- Header -->
+            <header id="header">
+                <a class="logo" href="/">AgriCheck</a>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+                    <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                  <li><a href="/" class='active'>Home</a></li>
+                  <li><a href="/certifications">Certifications</a></li>
+                  <li><a href="/farms">Farms</a></li>
+                </ul>
+            </nav>
 
-  <h1>Transparency Is Trust.</h1>
-
-  <h2>Certifications</h2>
-    The certifications will be tiered based on the overall score in each category.
+<div id="heading">
+  <h1>Certifications</h1>
+  <h2>Transparency Is Trust.</h2>
+</div>
+  
+<section id="main" class="wrapper">
+  <div class="inner">
+    <div class="content">
+      <header><h2>Tiers</h2></header>
+    <p>The certifications will be tiered based on the overall score in each category.</p>
     <ul>
       <li>Gold (All Tiers Passed)</li>
       <li>Silver (Three Tiers Passed)</li>
       <li>Bronze (Two Tiers Passed)</li>
     </ul>
 
-  <h2>Categories</h2>
+  <header><h2>Categories</h2></header>
   <ul>
     <li><h3>Sustainability</h3>
     <ul>
@@ -36,12 +48,14 @@
       <li><h4>Water Usage</h4></li>
       <li><h4>Input Efficiency</h4></li>
     </ul>
+    </li>
 
     <li><h3>Process Consistency</h3>
     <ul>
       <li><h4>Tracability</h4></li>
       <li><h4>Quality Management System</h4></li>
     </ul>
+    </li>
 
     <li><h3>Fertilizer Methods</h3>
     <ul>
@@ -49,14 +63,20 @@
       <li><h4>Emission Control</h4></li>
       <li><h4>Existing Certifications</h4></li>
     </ul>
-
+    </li>
     <li><h3>Pest Control Method</h3>
     <ul>
       <li><h4>Which Ones</h4></li>
       <li><h4>Emission Control</h4></li>
       <li><h4>Existing Certifications</h4></li>
     </ul>
+    </li>
   </ul>
+  </div>
+  </div>
+  </section>
+  
+
 
 
   <!-- <div class="body">
@@ -68,5 +88,12 @@
     {% endfor %}
   </table>
   </div> -->
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+                <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/browser.min.js' %}"></script>
+            <script src="{% static 'js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'js/util.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
 
 </body>
