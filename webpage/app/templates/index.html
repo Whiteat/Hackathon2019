@@ -1,15 +1,10 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
+<head>
   <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-                <script src="{% static 'js/jquery.min.js' %}"></script>
-            <script src="{% static 'js/browser.min.js' %}"></script>
-            <script src="{% static 'js/breakpoints.min.js' %}"></script>
-            <script src="{% static 'js/util.js' %}"></script>
-            <script src="{% static 'js/main.js' %}"></script>
 </head>
 
 <body>
@@ -20,21 +15,41 @@
                     <a href="#menu">Menu</a>
                 </nav>
             </header>
+                    <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                  <li><a href="/" class='active'>Home</a></li>
+                  <li><a href="/certifications">Certifications</a></li>
+                  <li><a href="/farms">Farms</a></li>
+                </ul>
+            </nav>
   <div class="navbar">
-    <img src="/static/img/icon.png" style="background-size: contain;" />
-    <ul>
-      <li><a href="/" class='active'>Home</a></li>
-      <li><a href="/certifications">Certifications</a></li>
-      <li><a href="/farms">Farms</a></li>
-    </ul>
+
+
   </div>
+  <section id="banner">
+    <div class="inner">
+      <h1>AgriCheck</h1>
+      <p>A trust based certification system for greenhouse products</p>
+    </div>
+  </section>
 
-  <h1>The Question </h1>
-  How can technology help consumers learn about the soil and water management and production
-  practices used to product the flowers and plants they purchase?
-
-  <h1>Background</h2>
-    Niagara is home to over 500 acres of greenhouses; much of that in floriculture (flower)
+<section class="wrapper">
+  <div class="inner">
+  <header class="special">
+              <img src="/static/img/icon.png" class="main-logo"/>
+  <h2>The Question </h2>
+  <p>How can technology help consumers learn about the soil and water management and production
+  practices used to product the flowers and plants they purchase?</p>
+  </header>
+  <div class="highlights">
+  <section>
+    <div class="content">
+    <header>
+    <a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+    <h3>Background</h3>
+    </header>
+    <p>Niagara is home to over 500 acres of greenhouses; much of that in floriculture (flower)
     & nursery production valued at over $300 million per year. At a provincial level, Ontario
     exports $275 million and imports another $260 million of flowers and nursery products every year.
     Flowers are beautiful, but most consumers don't know what happens inside a greenhouse, or whether the plants
@@ -44,21 +59,26 @@
     discharged into the natural environment. Many greenhouses have started recycling their water and using additional water
     treatment to remove leftover fertilizer. Educating consumers about growing practices and highlighting sustainably-grown Products
     may help encourage greenhouse growers to continue innovating and adopting better practices. How can technology provide some solutions here?
-
-    <h2>Takeaway</h2>
-    <ul>
-     <li>The technology already exists on a commerical scale to assist with soil erosion & depletion within greenhouses.</li>
-     <li>The challenge itself is to give producers/greenhouses incentive to adopt these technologies and industry best practices.</li>
-   </ul>
-
-<h2>Our Solution</h2>
-
-A consumer focused education inititive that starts at the retail level. Our solution is to offer a certification process for greenhouses
-as well as soil producers so consumers know what they are getting when they bring potted plants home.
-
-
-  <h2>The Approach </h2>
-  We need a simple way to inform the consumers about where plants come from. Following from how grocery stores sort produce based
+    </p>
+    </div>
+    </section>
+  <section>
+    <div class="content">
+    <header>
+      <a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+      <h3>Our Solution</h3>
+        </header>
+      <p>A consumer focused education inititive that starts at the retail level. Our solution is to offer a certification process for greenhouses
+as well as soil producers so consumers know what they are getting when they bring potted plants home.</p>
+</div>
+</section>
+  <section>
+    <div class="content">
+    <header>
+      <a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+      <h3>The Approach </h3>
+      </header>
+      <p>We need a simple way to inform the consumers about where plants come from. Following from how grocery stores sort produce based
   on organic or non-organic certified vegetables. If we can come up with a certification for those greenhouses that is plainly visible
   to the consumer like the organic and non-organic produce.
 
@@ -77,15 +97,18 @@ as well as soil producers so consumers know what they are getting when they brin
 
  When the consumer trusts the product, they will return to the retailer for more products, if the consumer comes back to buy more the retailer
  and the farmer both win.
-
- The retailer
-
-  <h2>Certification</h2>
-
-  <h3>About Us</h3>
+</p>
+</div>
+</section>
 
 </body>
 
-<script>
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+                <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/browser.min.js' %}"></script>
+            <script src="{% static 'js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'js/util.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
+<!--<script>
   $('body').append(`running jquery version ${$.fn.jquery}`);
-</script>
+</script>-->
