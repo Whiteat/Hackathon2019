@@ -33,19 +33,27 @@
                   <li><a href="/soils">Soils</a></li>
                 </ul>
             </nav>
+
+  <section id="main" class="wrapper">
+  <div class="inner">
+  <!--<div class="highlights">-->
+  <section>
+  <div class="content">
+  <h1>Farm Record</h1>
   {% if not greenhouse %}
     <h1> Error: Greenhouse not found </h1>
   {% else %}
-    <h1>{{ greenhouse.name }}</h1>
-    <p>Type: {{ greenhouse.type }}</p>
-    <p>Address: {{ greenhouse.address }}</p>
-    <p>Phone: {{ greenhouse.phone }}</p>
-    <p>Join Date: {{ greenhouse.joinDate }}</p>
+    <h2>{{ greenhouse.name }}</h2>
+    <h3>Type: {{ greenhouse.type }}</h3>
+    <h3>Address: {{ greenhouse.address }}</h3>
+    <h3>Phone: {{ greenhouse.phone }}</h3>
+    <h3>Join Date: {{ greenhouse.joinDate }}</h3>
 
+      <h2>Certifications: </h2>
     {% if not certifications %}
-      <p>No Certifications</p>
+      <h3>No Certifications</h3>
     {% else %}
-      <p>Certifications: </p>
+
       <table style="padding-left: 25px;">
       {% for cert in certifications %}
         <tr><td><a href='/certifications/#{{ cert.name }}'>{{ cert.name }}</a></td><td>{{ cert.score }}%</td><td>Issued on {{ cert.dateCertified }}</td></tr>
@@ -53,10 +61,10 @@
     </table>
     {% endif %}
 
+      <h2>Products:</h2>
     {% if not products %}
-      <p>No Products</p>
+      <h3>No Products</h3>
     {% else %}
-      <p>Products:</p>
       <ul>
       {% for p in products %}
         <li><a href="/product/{{p.product.id}}">{{ p.recipe.name }}</a></li>
@@ -64,6 +72,11 @@
     </ul>
     {% endif %}
   {% endif %}
+  </div>
+  </section>
+  <!--</div>-->
+  </div>
+  </section>
 
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
                 <script src="{% static 'js/jquery.min.js' %}"></script>
