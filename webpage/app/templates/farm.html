@@ -16,6 +16,7 @@
             <script src="{% static 'js/main.js' %}"></script>
 </head>
 
+    <body class="is-preload">
         <!-- Header -->
             <header id="header">
                 <a class="logo" href="/">AgriCheck</a>
@@ -46,7 +47,7 @@
       <p>Certifications: </p>
       <table style="padding-left: 25px;">
       {% for cert in certifications %}
-        <tr><td>{{ cert.name }}</td><td>{{ cert.score }}%</td><td>Issued on {{ cert.dateCertified }}</td></tr>
+        <tr><td><a href='/certifications/#{{ cert.name }}'>{{ cert.name }}</a></td><td>{{ cert.score }}%</td><td>Issued on {{ cert.dateCertified }}</td></tr>
       {% endfor %}
     </table>
     {% endif %}
