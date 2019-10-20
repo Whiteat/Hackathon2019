@@ -8,15 +8,22 @@
 </head>
 
 <body>
-  <div class="navbar">
-    <img src="/static/img/icon.png" style="background-size: contain;" />
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/certifications">Certifications</a></li>
-      <li><a href="/farms">Farms</a></li>
-      <li><a href="/soils" class='active'>Soils</a></li>
-    </ul>
-  </div>
+        <!-- Header -->
+            <header id="header">
+                <a class="logo" href="/">AgriCheck</a>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+                    <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                  <li><a href="/" class='active'>Home</a></li>
+                  <li><a href="/certifications">Certifications</a></li>
+                  <li><a href="/farms">Farms</a></li>
+                  <li><a href="/soils">Soils</a></li>
+                </ul>
+            </nav>
 
   {% if not soil %}
     <h1> Error: Soil not found!</h1>
@@ -30,4 +37,10 @@
     <p>Copper: {{ soil.copper }}</p>
     <p>Sulfur: {{ soil.sulphur }}</p>
   {% endif %}
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/browser.min.js' %}"></script>
+            <script src="{% static 'js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'js/util.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
 </body>
