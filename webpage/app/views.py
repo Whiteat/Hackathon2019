@@ -20,6 +20,18 @@ def certification(request, id):
         }
     return render(request, 'certification.html', context)
 
+def soils(request):
+    context = {
+    'soils': Soil.objects.all(),
+    }
+    return render(request, 'soils.html', context)
+
+def soil(request, id):
+    context = {
+        'soil': Soil.objects.get(id=id),
+        }
+    return render(request, 'soil.html', context)
+
 def greenhouses(request):
     context = {
         'greenhouses': Greenhouse.objects.all()
