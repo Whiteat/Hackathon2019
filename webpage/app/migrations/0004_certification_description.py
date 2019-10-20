@@ -7,7 +7,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('app', '0003_merge_20191019_2113'),
-
     ]
 
     operations = [
